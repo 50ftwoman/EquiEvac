@@ -1,19 +1,20 @@
-
+<body>
+  <p>
+    <h3><strong>User:</strong></h3>
+    <%= @post.user.name %>
+  </p>
 <p>
-  <strong>Title</strong>
+  <h3><strong>Title</strong></h3>
   <%= @post.title%>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <h3><strong>Content:</strong></h3>
   <%= @post.body %>
 </p>
-
-<p>
-  <strong>User:</strong>
-  <%= @post.user.name %>
-</p>
-
+</div>
+</div>
+<hr>
 <p>
   <strong>Comments:</strong>
   <%= render 'comments/form' %>
@@ -39,3 +40,4 @@
   <% end %>
 </tbody>
 </table>
+</body>
