@@ -1,6 +1,30 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+//
+
 .posts {
   border: 3px solid black;
 }
+
+.post-content {
+  text-align: left;
+  margin: 10px 10px 10px 10px;
+}
+
+.title {
+  margin: 5px;
+  font-variant: small-caps;
+}
+
+.commentcontent {
+  text-align: center;
+}
+
+.postshow {
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
 body {
   padding-top: 60px;
 }

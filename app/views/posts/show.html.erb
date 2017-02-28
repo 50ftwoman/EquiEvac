@@ -1,43 +1,56 @@
+<div class="col-lg-8">
 <body>
-  <p>
-    <h3><strong>User:</strong></h3>
-    <%= @post.user.name %>
-  </p>
+  <div class="posts">
+  <div class="pull-left">
 <p>
-  <h3><strong>Title</strong></h3>
-  <%= @post.title%>
-</p>
-
-<p>
-  <h3><strong>Content:</strong></h3>
-  <%= @post.body %>
+  <div class="title">
+  <!-- <h3><strong>Title</strong></h3> -->
+  <h1><strong><%= @post.title%></h1></strong>
 </p>
 </div>
+
+
+<p>
+  <h4><strong>By:</strong></h4>
+  <h4><%= @post.user.name %><h4>
+</p>
 </div>
 <hr>
 <p>
-  <strong>Comments:</strong>
+  <br><br>
+  <div class="post-content">
+  <h2><strong>
+  <%= @post.body %>
+  </strong></h2>
+</p>
+</div>
+<p>
+  <br><br><br><br>
+
   <%= render 'comments/form' %>
 </p>
-
-
-
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Comment</th>
-      <th colspan="10"></th>
+      <th colspan="20"></th>
     </tr>
   </thead>
-
+  <br>
 <tbody>
   <% @post.comments.each do |comment| %>
     <tr>
-      <td><%= comment.user.name %></td><br><br>
-      <td><%= comment.content %></td>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      By: <%= comment.user.name %>
+    </div>
+    <div class="panel-body">
+      <%= comment.content %>
+    </div>
+  </div>
+  <%= link_to 'Edit', edit_post_comment_path(comment), :class => "btn btn-default btn-sm" if current_user == comment.user %>
     </tr>
   <% end %>
 </tbody>
 </table>
 </body>
+</div>

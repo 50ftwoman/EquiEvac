@@ -43,6 +43,10 @@ def find_post
     # @user = User.find(params[:user_id])
 end
 
+def find_comment
+    @comment = Comment.find(params[:comment_id])
+  end
+
 def comment_params
   params.require(:comment).permit(:content)
 end
