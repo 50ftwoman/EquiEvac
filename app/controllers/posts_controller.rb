@@ -20,8 +20,18 @@ class PostsController < ApplicationController
 
   end
 
+
+def update
+  @post = Post.find(params[:id])
+  if @post.update_attributes(params.require(:post).permit(:title, :body, :image))
+    redirect_to posts_path
+  else
+    render :edit
+end
+end
+
   def create
-    @post = current_user.posts.new(params.require(:post).permit(:title, :body))
+    @post = current_user.posts.create(params.require(:post).permit(:title, :image, :body))
     if @post.save
       # If user saves in the db successfully:
       flash[:notice] = "Posted!"
