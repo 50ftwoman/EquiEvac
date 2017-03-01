@@ -1,24 +1,50 @@
-# README
+#EquiEvac
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+##Introduction
+EquiEvac is here to help with the swift evacuation of horses and large animals during natural disasters and other emergencies. This app is intended to quickly and easily bring together large animal owners and attendants with capable volenteers who can assist in transport, medical care, and supplying necessities during difficult times. 
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+##Approach
+My approach to this project will be first creating the functionality with rails, and stylizing with boostrap. 
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+##MVP
+* Functional account creation
+* Functional account login
+* User ability to create, update, and delete their own posts.
+* User ability to delete comments by others on their own posts.
+* User ability to add images to posts
+* User ability to comment on posts
 
-* Deployment instructions
 
-* ...
+
+##User Stories
+https://trello.com/b/qZFS91dz/equievac
+
+
+
+##Technologies
+* ruby
+* rails
+* html/css
+* bootstrap
+		
+
+
+##ERD
+![lofi_wireframe] (./assets/erd.png)
+
+
+
+##Wireframes
+
+
+![lofi_wireframe] (./assets/homepage.png)
+ 
+ ![lofi_wireframe2] (./assets/login2.png)
+ 
+ ![lofi_wireframe3] (./assets/post2.png)
