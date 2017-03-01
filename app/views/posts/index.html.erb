@@ -13,21 +13,28 @@
 
     </tr>
   </thead>
-  <div class="container">
-  <tbody>
+  <div class="center">
+    <div class="row">
     <!-- <div class="row" id="postform">
     <div class="col-md-6"> -->
     <% @posts.each do |post| %>
-    <div class="postshow">
+    <div class="col-md-4 col-xs-6">
+    <div class="icon">
+    <div class="thumbnail">
       <tr>
         <h2><strong><td><%= post.title %></td></strong></h2>
+        <br>
+        <td><%= link_to (image_tag post.image.url(:small)), post_path(post), :class => "btn btn-default btn-sm" %></td>
+        <br>
         <td>By: <%= post.user.name %></td>
-        <td><%= link_to 'Show', post_path(post), :class => "btn btn-default btn-sm" %></td>
+        <br>
         <td><%= link_to 'Edit', edit_post_path(post), :class => "btn btn-default btn-sm" if current_user == post.user %></td>
         <td><%= link_to 'Destroy', post_path(post), :class => "btn btn-default btn-sm", method: :delete, data: { confirm: 'Are you sure?'} if current_user == post.user%></td>
         <br>
         <br>
       </tr>
+</div>
+</div>
 </div>
     <% end %>
   </div>

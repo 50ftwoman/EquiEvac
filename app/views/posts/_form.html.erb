@@ -3,6 +3,10 @@
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control" %>
 </div>
+<div class="form-group">
+  <%= f.collection_select(:category_id, Category.all, :id, :cat_type, prompt: true)  %>
+
+</div>
 
 <div class="form-group">
     <%= f.label :image %>

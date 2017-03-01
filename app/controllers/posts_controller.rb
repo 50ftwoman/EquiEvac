@@ -31,7 +31,7 @@ end
 end
 
   def create
-    @post = current_user.posts.create(params.require(:post).permit(:title, :image, :body))
+    @post = current_user.posts.new(params.require(:post).permit(:title, :category_id, :image, :body))
     if @post.save
       # If user saves in the db successfully:
       flash[:notice] = "Posted!"

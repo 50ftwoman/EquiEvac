@@ -1,9 +1,9 @@
 class Post < ApplicationRecord
     belongs_to :user
-    # belongs_to :category
+    belongs_to :category
     has_many :comments, dependent: :destroy
     has_attached_file :image,
-                      styles: { medium: "500x500#", thumb: "100x100#" },
+                      styles: { medium: "500x500#", small: "150x150#", thumb: "100x100#" },
                       storage: :s3,
                       url: ":s3_domain_url",
                       path: "/:class/:attachment/:id_partition/:style/:filename",
