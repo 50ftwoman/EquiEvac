@@ -2,6 +2,7 @@
 
 <div class="jumbotron">
   <h1>EquiEvac</h1>
+  <%= link_to 'Log In', login_path, :class => "btn btn-primary btn-lg" %> <%= link_to 'Sign Up', new_user_path, :class => "btn btn-primary btn-lg" %>
 </div>
 
   <thead>
@@ -24,6 +25,7 @@
         <td><%= link_to 'Destroy', post_path(post), :class => "btn btn-default btn-sm", method: :delete, data: { confirm: 'Are you sure?'} if current_user == post.user%></td>
       </tr>
   <br><br>
+
 </div>
     <% end %>
     <hr>

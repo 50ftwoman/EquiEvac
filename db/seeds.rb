@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+if !Category.exists?(1)
+Category.create([
+{cat_type: "service"},
+{cat_type: "need"}
+])
+end

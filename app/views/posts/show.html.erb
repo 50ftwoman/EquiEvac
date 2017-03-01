@@ -1,4 +1,5 @@
 <div class="col-lg-8">
+  <div class="container">
 <body>
   <div class="posts">
   <div class="pull-left">
@@ -10,10 +11,10 @@
 </div>
 
 
-<p>
+  <div class="namer" text-align: left>
   <h4><strong>By:</strong></h4>
   <h4><%= @post.user.name %><h4>
-</p>
+</td>
 </div>
 <hr>
 <p>
@@ -39,18 +40,19 @@
 <tbody>
   <% @post.comments.each do |comment| %>
     <tr>
-    <div class="panel panel-default">
+    <div class="panel panel-primary">
       <div class="panel-heading">
-      By: <%= comment.user.name %>
+      <strong>By: <%= comment.user.name %></strong>
     </div>
     <div class="panel-body">
       <%= comment.content %>
     </div>
   </div>
-  <%= link_to 'Edit', edit_post_comment_path(comment), :class => "btn btn-default btn-sm" if current_user == comment.user %>
+  <%= link_to 'Edit', edit_post_comment_path(@post, comment), :class => "btn btn-default btn-sm" if current_user == comment.user %>
     </tr>
   <% end %>
 </tbody>
 </table>
 </body>
+</div>
 </div>
