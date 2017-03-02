@@ -1,7 +1,14 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    if request.query_parameters[:category] == 'service'
+      @posts = Post.where(category_id: 1)
+    elsif request.query_parameters[:category] == 'need'
+      @posts = Post.where(category_id: 2)
+    else
+      @posts = Post.all
+    end
+
   end
 
   def show
