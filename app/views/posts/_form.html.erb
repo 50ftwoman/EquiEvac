@@ -1,4 +1,4 @@
-<%= form_for @post do |f| %>
+<%= form_for [@post] do |f| %>
 <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control" %>
@@ -10,8 +10,7 @@
 
 <div class="form-group">
     <%= f.label :image %>
-</div>
-<%= f.file_field :image, class: "form-control" %>
+    <%= f.file_field :image, class: "form-control" %>
 </div>
 
 <div class="form-group">
