@@ -37,12 +37,13 @@ https://trello.com/b/qZFS91dz/equievac
 * Location services 
 * Posts page rendering without sign in
 
-##Installation
-* Clone repo
-* Create database if you wish,
-* db:create, db:migrate, bundle install
-* Open in text editor 
-		
+##Installation Instructions
+
+Clone the repository
+Open app directory
+Install gems
+Open Rails server
+In browser open: localhost:3000
 
 
 ##ERD
