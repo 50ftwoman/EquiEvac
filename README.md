@@ -36,6 +36,11 @@ https://trello.com/b/qZFS91dz/equievac
 ##Known Issues
 * Location services 
 * Posts page rendering without sign in
+
+##Installation
+* Clone repo
+* Create database if you wish, migrate, etc
+* Open in text editor 
 		
 
 
