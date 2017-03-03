@@ -39,7 +39,8 @@ https://trello.com/b/qZFS91dz/equievac
 
 ##Installation
 * Clone repo
-* Create database if you wish, migrate, etc
+* Create database if you wish,
+* db:create, db:migrate, bundle install
 * Open in text editor 
 		
 
