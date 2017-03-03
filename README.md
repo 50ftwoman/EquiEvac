@@ -32,6 +32,10 @@ https://trello.com/b/qZFS91dz/equievac
 * rails
 * html/css
 * bootstrap
+
+##Known Issues
+* Location services 
+* Posts page rendering without sign in
 		
 
 
